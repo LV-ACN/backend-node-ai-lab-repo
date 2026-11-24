@@ -1,0 +1,12 @@
+{
+  "scenarioId": "SAMPLE-001",
+  "request": {
+    "sku": "SAMPLE-SKU-1",
+    "quantity": 3
+  },
+  "expected": {
+    "status": 200,
+    "sku": "SAMPLE-SKU-1",
+    "quantity": 3
+  }
+}

@@ -1,0 +1,20 @@
+# Node
+inventory-service/node_modules/
+functional-tests/node_modules/
+functional-tests/playwright-report/
+functional-tests/test-results/
+functional-tests/test-result.json
+npm-debug.log*
+
+# Java / Maven
+reservation-service/target/
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+*.iml
+.vscode/

@@ -1,0 +1,13 @@
+---
+description: Guardrails for all agent work in this repo
+alwaysApply: true
+---
+- inventory-service/ is read-only. Never create, edit or delete files there.
+- Work only on approved items in the current tasks.md. Keep diffs small and
+  explain every changed file.
+- Use synthetic data only. No secrets, tokens or real guest data in code,
+  logs or fixtures.
+- Business rules (capacity, overbooking policy) live only in reservation-service.
+  Never duplicate them in other modules, scripts or the agent.
+- Ask before running destructive commands or adding any new dependency.
+- Never delete or weaken an existing test to make it pass.
