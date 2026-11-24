@@ -1,5 +1,5 @@
 const express = require('express');
-const { findRecord, findByProperty } = require('./data');
+const { findRecord, findByProperty, resetAll } = require('./data');
 
 const app = express();
 app.use(express.json());
@@ -45,6 +45,13 @@ app.post('/api/properties/:propertyId/inventory/:roomType/book', (req, res) => {
 
   row.bookedRooms += rooms;
   res.json(row);
+});
+
+// Test/lab-only helper: restores every room type's bookedRooms to 0 so
+// experiments and functional tests can start from a known baseline.
+app.post('/api/admin/reset', (req, res) => {
+  resetAll();
+  res.json({ status: 'reset' });
 });
 
 module.exports = app;

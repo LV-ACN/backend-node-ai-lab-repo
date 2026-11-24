@@ -19,4 +19,10 @@ function findByProperty(propertyId) {
   return inventory.filter((row) => row.propertyId === propertyId);
 }
 
-module.exports = { inventory, findRecord, findByProperty };
+function resetAll() {
+  inventory.forEach((row) => {
+    row.bookedRooms = 0;
+  });
+}
+
+module.exports = { inventory, findRecord, findByProperty, resetAll };
